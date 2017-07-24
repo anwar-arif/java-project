@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.29767441860465116" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLDocumentController">
+   <items>
+      <AnchorPane maxWidth="250.0" minHeight="0.0" minWidth="-Infinity">
+         <children>
+            <Label fx:id="judge_notification" layoutX="25.0" layoutY="19.0" prefHeight="25.0" prefWidth="150.0" text="Select Judge for nofication" />
+            <CheckBox fx:id="codeforces" layoutX="25.0" layoutY="50.0" mnemonicParsing="false" onMousePressed="#set_value" text="codeforces" />
+            <CheckBox fx:id="topcoder" layoutX="25.0" layoutY="67.0" mnemonicParsing="false" onMousePressed="#set_value" text="topcoder" />
+            <CheckBox fx:id="codecheff" layoutX="25.0" layoutY="84.0" mnemonicParsing="false" onMousePressed="#set_value" text="codecheff" />
+            <CheckBox fx:id="hackerrank" layoutX="25.0" layoutY="101.0" mnemonicParsing="false" onMousePressed="#set_value" prefHeight="17.0" prefWidth="79.0" text="hackerrank" />
+            <CheckBox fx:id="hackerearth" layoutX="25.0" layoutY="118.0" mnemonicParsing="false" onMousePressed="#set_value" text="hackerearth" />
+            <CheckBox fx:id="csacademy" layoutX="25.0" layoutY="135.0" mnemonicParsing="false" onMousePressed="#set_value" text="csacademy" />
+            <ChoiceBox fx:id="selectTime" layoutX="20.0" layoutY="206.0" prefWidth="150.0" />
+            <Label layoutX="25.0" layoutY="180.0" text="time before nofication" />
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <Button fx:id="refresh" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <TableView fx:id="table" fixedCellSize="-5.0" layoutX="12.0" layoutY="46.0" prefHeight="409.0" prefWidth="464.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+               <columns>
+                  <TableColumn fx:id="JudgeCol" prefWidth="126.0" text="Judge" />
+                  <TableColumn fx:id="STCol" prefWidth="152.0" text="Start Time" />
+                  <TableColumn fx:id="ETCol" prefWidth="145.0" text="End Time" />
+                  <TableColumn fx:id="TitCol" prefWidth="406.0" text="Title" />
+               </columns>
+            </TableView>
+            <Label fx:id="lbl" layoutX="81.0" layoutY="18.0" prefHeight="17.0" prefWidth="189.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
